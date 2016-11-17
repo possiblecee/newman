@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Postman reports</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</style></head>
+  <body cz-shortcut-listen="true">
+    <div class="container">
+      <h3>Newman Report</h3>
+      <table class="table">
+        <thead>
+        </thead>
+        <tbody>
+          {{#each executions}}
+          <tr>
+            <td width="20">
+              <span class="label label-{{style.status}}">{{responseCode}}</span>
+            </td>
+            <td>
+              <strong class="label label-primary">{{method}}</strong>
+              <samp>{{url}}<samp>
+            </td>
+            <td>
+              {{name}}
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      <div class="mastfoot">
+        <div class="inner">
+          <p>POSSIBLE CEE &copy;.</p>
+        </div>
+      </div>
+    </div>
+</body></html>
